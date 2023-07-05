@@ -1,0 +1,22 @@
+id-task {
+  width: 300px !important;
+}
+.input-group > .form-control,
+.input-group > .form-floating,
+.input-group > .form-select {
+  position: relative;
+  flex: 0.6 0.6 !important;
+  width: 100px !important;
+  min-width: 0;
+}
+.form-select {
+  width: 150px !important;
+}
+#lb-select {
+  width: 50px !important;
+}
+#form-input {
+  margin-top: 20px;
+  display: flex;
+  column-gap: 10px !important;
+}
