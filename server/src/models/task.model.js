@@ -75,9 +75,30 @@ const modelDeleteTask = (id, res) => {
   });
 };
 
+const modelEditTask = (id, taskUpdate, res) => {
+  let query = `UPDATE tasks SET content=?, due_date=?,status_col=?,assigned_to=? WHERE id=?`;
+  const task = [
+    taskUpdate.content,
+    taskUpdate.due_date,
+    taskUpdate.status_col,
+    taskUpdate.assigned_to,
+    id,
+  ];
+  console.log(55555, task);
+  sql.query(query, task, (err, result) => {
+    if (err) {
+      console.log(err);
+      res.status(500).json({ msg: err });
+      return;
+    }
+    res.status(200).json({ msg: "Sửa dữ liệu thành công" });
+  });
+};
+
 module.exports = {
   modelGetAllTask,
   modelGetTaskById,
   modelPostTask,
   modelDeleteTask,
+  modelEditTask,
 };

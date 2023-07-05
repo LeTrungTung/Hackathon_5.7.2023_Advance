@@ -25,9 +25,22 @@ const deleteTask = (req, res) => {
   taskModel.modelDeleteTask(id, res);
 };
 
+const editTask = (req, res) => {
+  // do something
+  const id = Number(req.params.id);
+  const taskUpdate = {
+    content: req.body.content,
+    due_date: req.body.due_date,
+    status_col: req.body.status_col,
+    assigned_to: req.body.assigned_to,
+  };
+  taskModel.modelEditTask(id, taskUpdate, res);
+};
+
 module.exports = {
   getAllTask,
   getTaskById,
   postTask,
   deleteTask,
+  editTask,
 };

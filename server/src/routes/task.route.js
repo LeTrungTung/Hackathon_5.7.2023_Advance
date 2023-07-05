@@ -8,7 +8,7 @@ route.get("/", taskController.getAllTask);
 
 route.get("/:id", taskController.getTaskById);
 
-// // // route.patch("/:id", userController.editUser);
+route.patch("/:id", taskController.editTask);
 route.post("/", taskController.postTask);
 route.delete("/:id", taskController.deleteTask);
 

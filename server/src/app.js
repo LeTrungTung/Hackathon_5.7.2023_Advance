@@ -21,7 +21,7 @@ app.use("/api/v1/task", taskRoute);
 // handle err
 
 // start server
-const PORT = 5000;
+const PORT = 8000;
 app.listen(PORT, () => {
   console.log(`Server express running http://localhost:${PORT}`);
 });
